@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  		<meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 		<title>Multiplication Table Generator</title>
+		<link rel = "stylesheet" href = "frame.css">
+	</head>
+	<body>
+  		<h2>Generate Multiplication Table</h2>
+  		<form id="multiplicationForm">
+    		<label for="numberInput"> Enter a number: </label><br>
+    		<input type="textbox" id="numberInput" name="numberInput" min="1" max="10" required><br><br>
+    		<input type="button" value="Generate Table" onclick="generateTable()">
+    
+    		<h4>Multiplication Table</h4>
+    		<table border="1" id="multiplicationTable">
+     			 <!-- Table content will be generated dynamically -->
+   		 	</table>
+ 		 </form>
+
+  		<script>
+    		function generateTable() {
+    	  		// Get the input value
+      			var number = document.getElementById("numberInput").value;
+
+      			// Get the table element
+      			var table = document.getElementById("multiplicationTable");
+
+      			// Clear existing table content
+      			table.innerHTML = '';
+
+      			// Generate table rows and cells
+      			for (var i = 1; i <= 10; i++) {
+        		var row = document.createElement("tr"); // Create a new table row
+
+        		// Create the multiplication results for the current number
+        		var result = i * number;
+
+        		// Create the cells for the row
+        		var cell1 = document.createElement("td");
+        		cell1.textContent = number + " x " + i + " = ";
+        		row.appendChild(cell1);
+
+        		var cell2 = document.createElement("td");
+        		cell2.textContent = result;
+        		row.appendChild(cell2);
+
+        		// Append the row to the table
+        		table.appendChild(row);
+      		}
+   		 }
+  		</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+body
+	{
+		color : yellow;
+	}
+	
+/*button 
+	{
+		color : white;
+	} */
+	
+div
+	{
+		display : block;
+		border : 1px solid black;
+		padding : 15px;
+	}
+
+table 
+	{
+		background-color : rgba(76, 175, 80, 0.3)
+	}
+	
+#numberInput
+	{
+		border : none;
+		border-bottom : 1px solid gray;
+		border-radius : 0;
+		background-color : rgba(0, 0, 0, 0.5);
+		color : white;
+	}
