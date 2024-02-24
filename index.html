@@ -25,7 +25,15 @@
 			</div>
 			<div class = "right">
 				<button> Click me </button>
-				<button> Feedback </button>
+				<input type="button" value="Print" onclick="handlePrint()" />
+		<script type ="text/javascript">
+			const handlePrint = () =>
+			   {
+				 var actContents = document.body.innerHTML;
+				 document.body.innerHTML = actContents;
+				 window.print();
+			   }
+		</script>
 			</div>
 		</header>
 		<iframe src = "frame.html" height = "530px" width = "250px"></frame>
